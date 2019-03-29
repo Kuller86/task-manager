@@ -1,0 +1,198 @@
+/*.page {
+    background: linear-gradient(to bottom, #cdcbae, #bb6a0c);
+    background-repeat: no-repeat;
+    height: 100%;
+}*/
+
+.backgroud-page {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #cdcbae, #bb6a0c);
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.btn-main {
+    background: #3e67af;
+    color: white;
+    font-weight: bold;
+}
+.btn-main > i {
+    color: #334a6f;
+}
+
+i.icon-left {
+    padding-right: 5px;
+}
+i.icon-right {
+    padding-left: 5px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.task-add {
+    background: #dedede;
+}
+
+.task-add i{
+    font-size: 40px;
+    color: #5e9273;
+}
+
+.task-add .btn-green{
+    color: white;
+    background: linear-gradient(to bottom, #94cbae, #5a9172);
+}
+.task-add .task-name{
+    width: 70%;
+}
+
+td.task-name {
+    width: 60%;
+}
+
+.project .card-header {
+    background: #3e67af;
+}
+
+.card-header {
+    color: white;
+}
+
+.project-action > button.btn {
+    border-right: 1px;
+    border-right-color: #456aaa;
+}
+
+.project-action > button.btn i{
+    color: #98b0d2;
+}
+
+.btn-group-vertical > .btn-half {
+    line-height: .1rem;
+}
+.btn-group-vertical > .btn-half:first-child {
+    padding-bottom: 0;
+}
+
+.btn-group-vertical > .btn-half:last-child {
+    padding-top: 0;
+}
+
+.btn-half:hover > i {
+    color: #5eb5e0;
+}
+
+.btn-sort {
+    position: relative;
+    min-width: 2.75em;
+    min-height: 2.5em;
+}
+.btn-sort > .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: inherit;
+}
+.btn-sort > .btn:first-child {
+    bottom: 50%;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.btn-sort > .btn:last-child {
+    top: 50%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.bd-navbar
+{
+    min-height: 4rem;
+    background-color: #3e67af;
+}
+
+/** Validator **/
+.input-group > .error {
+    color: red;
+    padding-left: 41px;
+}
+/** Login page **/
+.login-page {
+    width: 360px;
+    padding: 8% 0 8%;
+    margin: auto;
+
+}
+.form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.form button {
+    text-transform: uppercase;
+    outline: 0;
+    background: #3e67af;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #1436af;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.table-hover tbody tr.deadline {
+    background: red;
+}
+
+.table-hover tbody tr.deadline:hover {
+    background: darkred;
+}
+
+.table-hover tbody tr.complete {
+    background: green;
+}
+
+.table-hover tbody tr.complete:hover {
+    background: darkgreen;
+}

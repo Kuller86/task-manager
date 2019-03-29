@@ -1,0 +1,49 @@
+<div class="row" id="project-{{ project.id }}">
+    <div class="col-sm-8">
+        <div class="card project">
+            <div class="card-header d-flex">
+                <span class="navbar-text mr-auto" id="title-project-{{ project.id }}"><i class="project-icon icon-title icon-left {{ project.icon }}"></i><span class="project-name">{{ project.name }}</span></span>
+                <span class="project-action form-inline">
+                    <button type="button" class="btn btn-link" id="btn-project-edit-{{ project.id }}"
+                            data-url="{{ path('project_edit', {'id': project.id}) }}">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button type="button" class="btn btn-link" id="btn-project-confirm-delete-{{ project.id }}"
+                                data-url="{{ path('project_confirm_remove', {'id': project.id}) }}">
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </span>
+            </div>
+            <div class="card-body task-add">
+                <form action="{{ path('task_create') }}" method="POST">
+                    <div class="input-group"><i class="icon-left fas fa-plus"></i>
+                        <input type="hidden" name="task[project]" value="{{ project.id }}">
+                        <input type="text" name="task[name]" class="task-name form-control"
+                               placeholder="Start typing here to create a task"
+                               aria-label="Start typing here to create a task"
+                               aria-describedby="task-new-{{ project.id }}">
+                        <div class="input-group-append">
+                            <button class="btn btn-outline-secondary btn-green" type="button"
+                                    id="btn-task-new-{{ project.id }}" data-project="1" name="task[submit]">Add task
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card-body">
+                <table class="table table-hover">
+                    <tbody class="task-list">
+                    {% for task in project.tasks %}
+                        {{ include('task/_row.ajax.html.twig') }}
+                    {% else %}
+                        <tr class="task-list-empty">
+                            <td colspan="3">no records found</td>
+                        </tr>
+                    {% endfor %}
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

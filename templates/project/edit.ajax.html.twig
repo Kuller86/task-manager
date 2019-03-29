@@ -1,0 +1,5 @@
+{{ include('project/_form.html.twig', {
+    'action': path('project_edit', {id: project.id}),
+    'button_label': 'Update',
+    'title': 'Edit project'
+}) }}

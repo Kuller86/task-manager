@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Project list{% endblock %}
+
+{% block body %}
+    <h1>Projects</h1>
+    <div id="projects-list">
+        {% for project in projects %}
+            {{ include('project/project.ajax.html.twig') }}
+        {% endfor %}
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-main" id="btn-project-new" data-url="{{ path('project_create') }}"><i class="icon-left fas fa-plus"></i>Add TODO list</button>
+        </div>
+    </div>
+    <div class="modal fade" id="modalWindow" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+{% endblock %}
